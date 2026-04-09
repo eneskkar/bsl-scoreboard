@@ -1,0 +1,613 @@
+{
+  "volleyball-1775655049166": {
+    "sport": "volleyball",
+    "meta": {
+      "tournamentName": "",
+      "round": "",
+      "createdAt": 1775655049168,
+      "stage": "group",
+      "format": "bo3",
+      "setsToWin": 2,
+      "maxSets": 3
+    },
+    "teams": {
+      "A": {
+        "name": "TEAM A",
+        "abbr": "",
+        "logoUrl": "/uploads/1775655096155_ammann.png",
+        "panelBg": "",
+        "timeouts": 2,
+        "setsWon": 1,
+        "points": 0
+      },
+      "B": {
+        "name": "TEAM B",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "timeouts": 2,
+        "setsWon": 0,
+        "points": 0
+      }
+    },
+    "match": {
+      "currentSet": 2,
+      "serve": "A",
+      "status": "live",
+      "history": [
+        {
+          "setNo": 1,
+          "A": 25,
+          "B": 0,
+          "winner": "A"
+        }
+      ],
+      "break": {
+        "active": false,
+        "team": null,
+        "startedAt": null,
+        "durationSec": 30
+      }
+    },
+    "alerts": {
+      "setPoint": null,
+      "matchPoint": null
+    },
+    "lineups": {
+      "A": [],
+      "B": []
+    },
+    "ui": {
+      "showCard": null,
+      "showPregame": false,
+      "venueName": "TVF ZİRAAT BANKKART VOLEYBOL SALONU",
+      "mvpName": "",
+      "mvpTeam": "A",
+      "customTitle": "",
+      "customSubtitle": ""
+    }
+  },
+  "tennis-1775655129943": {
+    "sport": "tennis",
+    "meta": {
+      "tournamentName": "",
+      "round": "",
+      "createdAt": 1775655129944,
+      "format": "bo3",
+      "setsToWin": 2,
+      "maxSets": 3
+    },
+    "teams": {
+      "A": {
+        "name": "TEAM A",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "setsWon": 0,
+        "games": 0,
+        "points": "0"
+      },
+      "B": {
+        "name": "TEAM B",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "setsWon": 0,
+        "games": 0,
+        "points": "0"
+      }
+    },
+    "match": {
+      "currentSet": 1,
+      "server": "A",
+      "status": "live",
+      "history": [],
+      "tiebreak": false,
+      "tiebreakPoints": {
+        "A": 0,
+        "B": 0
+      }
+    },
+    "alerts": {
+      "setPoint": null,
+      "matchPoint": null
+    },
+    "lineups": {
+      "A": [],
+      "B": []
+    },
+    "ui": {
+      "showCard": null,
+      "showPregame": false,
+      "venueName": "",
+      "mvpName": "",
+      "mvpTeam": "A",
+      "customTitle": "",
+      "customSubtitle": ""
+    }
+  },
+  "tennis-1775662725543": {
+    "meta": {
+      "stage": "group",
+      "format": "bo3",
+      "setsToWin": 2,
+      "maxSets": 3
+    },
+    "teams": {
+      "A": {
+        "name": "TEAM A",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "setsWon": 0
+      },
+      "B": {
+        "name": "TEAM B",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "setsWon": 0
+      }
+    },
+    "match": {
+      "currentSet": 1,
+      "server": "A",
+      "status": "live",
+      "history": [],
+      "isTiebreak": false,
+      "currentSetScore": {
+        "A": 0,
+        "B": 0
+      }
+    },
+    "alerts": {},
+    "lineups": {
+      "A": [],
+      "B": []
+    },
+    "ui": {
+      "showCard": null,
+      "showPregame": false,
+      "venueName": "",
+      "mvpName": "",
+      "mvpTeam": "A",
+      "customTitle": "",
+      "customSubtitle": ""
+    }
+  },
+  "tennis-1775662802541": {
+    "meta": {
+      "stage": "final",
+      "format": "bo5",
+      "setsToWin": 3,
+      "maxSets": 5
+    },
+    "teams": {
+      "A": {
+        "name": "havelsan",
+        "abbr": "HAV",
+        "logoUrl": "/uploads/1775662903141_ammann.png",
+        "panelBg": "",
+        "setsWon": 0
+      },
+      "B": {
+        "name": "tusaş",
+        "abbr": "TUS",
+        "logoUrl": "/uploads/1775662917338_havelsan.png",
+        "panelBg": "",
+        "setsWon": 0
+      }
+    },
+    "match": {
+      "currentSet": 1,
+      "server": "A",
+      "status": "live",
+      "history": [],
+      "isTiebreak": false,
+      "currentSetScore": {
+        "A": 0,
+        "B": 0
+      }
+    },
+    "alerts": {},
+    "lineups": {
+      "A": [],
+      "B": []
+    },
+    "ui": {
+      "showCard": null,
+      "showPregame": false,
+      "venueName": "",
+      "mvpName": "",
+      "mvpTeam": "A",
+      "customTitle": "",
+      "customSubtitle": ""
+    }
+  },
+  "tennis-1775663088394": {
+    "sport": "tennis",
+    "meta": {
+      "tournamentName": "",
+      "round": "",
+      "createdAt": 1775663088395,
+      "stage": "final",
+      "format": "bo5",
+      "setsToWin": 3,
+      "maxSets": 5
+    },
+    "teams": {
+      "A": {
+        "name": "TEAM A",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "setsWon": 3
+      },
+      "B": {
+        "name": "TEAM B",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "setsWon": 2
+      }
+    },
+    "match": {
+      "currentSet": 5,
+      "server": "A",
+      "status": "finished",
+      "history": [
+        {
+          "setNo": 1,
+          "A": 6,
+          "B": 0,
+          "winner": "A",
+          "isTiebreak": false
+        },
+        {
+          "setNo": 2,
+          "A": 6,
+          "B": 0,
+          "winner": "A",
+          "isTiebreak": false
+        },
+        {
+          "setNo": 3,
+          "A": 0,
+          "B": 6,
+          "winner": "B",
+          "isTiebreak": false
+        },
+        {
+          "setNo": 4,
+          "A": 0,
+          "B": 6,
+          "winner": "B",
+          "isTiebreak": false
+        },
+        {
+          "setNo": 5,
+          "A": 9,
+          "B": 7,
+          "winner": "A",
+          "isTiebreak": true
+        }
+      ],
+      "isTiebreak": true,
+      "currentSetScore": {
+        "A": 9,
+        "B": 7
+      }
+    },
+    "alerts": {},
+    "lineups": {
+      "A": [],
+      "B": []
+    },
+    "ui": {
+      "showCard": "result",
+      "showPregame": false,
+      "venueName": "",
+      "mvpName": "",
+      "mvpTeam": "A",
+      "customTitle": "",
+      "customSubtitle": ""
+    }
+  },
+  "tennis-1775672354619": {
+    "sport": "tennis",
+    "meta": {
+      "tournamentName": "",
+      "round": "",
+      "createdAt": 1775672354622,
+      "stage": "group",
+      "format": "bo3",
+      "setsToWin": 2,
+      "maxSets": 3
+    },
+    "teams": {
+      "A": {
+        "name": "TEAM A",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "setsWon": 1
+      },
+      "B": {
+        "name": "TEAM B",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "setsWon": 2
+      }
+    },
+    "match": {
+      "currentSet": 3,
+      "server": "A",
+      "status": "finished",
+      "history": [
+        {
+          "setNo": 1,
+          "A": 6,
+          "B": 0,
+          "winner": "A",
+          "isTiebreak": false
+        },
+        {
+          "setNo": 2,
+          "A": 3,
+          "B": 6,
+          "winner": "B",
+          "isTiebreak": false
+        },
+        {
+          "setNo": 3,
+          "A": 7,
+          "B": 9,
+          "winner": "B",
+          "isTiebreak": true
+        }
+      ],
+      "isTiebreak": true,
+      "currentSetScore": {
+        "A": 7,
+        "B": 9
+      }
+    },
+    "alerts": {},
+    "lineups": {
+      "A": [],
+      "B": []
+    },
+    "ui": {
+      "showCard": "result",
+      "showPregame": false,
+      "venueName": "",
+      "mvpName": "",
+      "mvpTeam": "A",
+      "customTitle": "",
+      "customSubtitle": ""
+    }
+  },
+  "tennis-1775723209803": {
+    "meta": {
+      "stage": "group",
+      "format": "bo3",
+      "setsToWin": 2,
+      "maxSets": 3
+    },
+    "teams": {
+      "A": {
+        "name": "TEAM A",
+        "abbr": "",
+        "logoUrl": "/uploads/1775726925405_Ekran_g__r__nt__s___2026-04-07_133607.png",
+        "panelBg": "",
+        "setsWon": 0
+      },
+      "B": {
+        "name": "TEAM B",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "setsWon": 0
+      }
+    },
+    "match": {
+      "currentSet": 1,
+      "server": "A",
+      "status": "live",
+      "history": [],
+      "isTiebreak": false,
+      "currentSetScore": {
+        "A": 0,
+        "B": 0
+      }
+    },
+    "alerts": {},
+    "lineups": {
+      "A": [],
+      "B": []
+    },
+    "ui": {
+      "showCard": null,
+      "showPregame": false,
+      "venueName": "",
+      "mvpName": "",
+      "mvpTeam": "A",
+      "customTitle": "",
+      "customSubtitle": ""
+    }
+  },
+  "tennis-1775726979836": {
+    "meta": {
+      "stage": "group",
+      "format": "bo3",
+      "setsToWin": 2,
+      "maxSets": 3
+    },
+    "teams": {
+      "A": {
+        "name": "TEAM A",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "setsWon": 0
+      },
+      "B": {
+        "name": "TEAM B",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "setsWon": 0
+      }
+    },
+    "match": {
+      "currentSet": 1,
+      "server": "A",
+      "status": "live",
+      "history": [],
+      "isTiebreak": false,
+      "currentSetScore": {
+        "A": 0,
+        "B": 0
+      }
+    },
+    "alerts": {},
+    "lineups": {
+      "A": [],
+      "B": []
+    },
+    "ui": {
+      "showCard": null,
+      "showPregame": false,
+      "venueName": "",
+      "mvpName": "",
+      "mvpTeam": "A",
+      "customTitle": "",
+      "customSubtitle": ""
+    }
+  },
+  "tennis-1775731521544": {
+    "meta": {
+      "stage": "group",
+      "format": "bo3",
+      "setsToWin": 2,
+      "maxSets": 3
+    },
+    "teams": {
+      "A": {
+        "name": "TEAM A",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "setsWon": 0
+      },
+      "B": {
+        "name": "TEAM B",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "setsWon": 0
+      }
+    },
+    "match": {
+      "currentSet": 1,
+      "server": "A",
+      "status": "live",
+      "history": [],
+      "isTiebreak": false,
+      "currentSetScore": {
+        "A": 0,
+        "B": 0
+      }
+    },
+    "alerts": {},
+    "lineups": {
+      "A": [],
+      "B": []
+    },
+    "ui": {
+      "showCard": null,
+      "showPregame": false,
+      "venueName": "",
+      "mvpName": "",
+      "mvpTeam": "A",
+      "customTitle": "",
+      "customSubtitle": ""
+    }
+  },
+  "tennis-1775747862965": {
+    "sport": "tennis",
+    "meta": {
+      "tournamentName": "",
+      "round": "",
+      "createdAt": 1775747862967,
+      "stage": "group",
+      "format": "bo3",
+      "setsToWin": 2,
+      "maxSets": 3
+    },
+    "teams": {
+      "A": {
+        "name": "adesso",
+        "abbr": "",
+        "logoUrl": "/uploads/1775747892989_adesso.png",
+        "panelBg": "",
+        "setsWon": 1
+      },
+      "B": {
+        "name": "hangikredi",
+        "abbr": "",
+        "logoUrl": "/uploads/1775747914270_hangikredi.png",
+        "panelBg": "",
+        "setsWon": 2
+      }
+    },
+    "match": {
+      "currentSet": 3,
+      "server": "B",
+      "status": "finished",
+      "history": [
+        {
+          "setNo": 1,
+          "A": 6,
+          "B": 4,
+          "winner": "A",
+          "isTiebreak": false
+        },
+        {
+          "setNo": 2,
+          "A": 0,
+          "B": 6,
+          "winner": "B",
+          "isTiebreak": false
+        },
+        {
+          "setNo": 3,
+          "A": 7,
+          "B": 9,
+          "winner": "B",
+          "isTiebreak": true
+        }
+      ],
+      "isTiebreak": true,
+      "currentSetScore": {
+        "A": 7,
+        "B": 9
+      }
+    },
+    "alerts": {},
+    "lineups": {
+      "A": [],
+      "B": []
+    },
+    "ui": {
+      "showCard": null,
+      "showPregame": false,
+      "venueName": "",
+      "mvpName": "",
+      "mvpTeam": "A",
+      "customTitle": "",
+      "customSubtitle": ""
+    }
+  }
+}
