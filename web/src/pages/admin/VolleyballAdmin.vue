@@ -146,7 +146,7 @@
             <input
               :value="state?.ui?.venueName || ''"
               @input="updateVenue($event.target.value)"
-              placeholder="TVF ZİRAAT BANKKART VOLEYBOL SALONU"
+              placeholder=""
             />
           </div>
 

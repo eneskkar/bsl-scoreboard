@@ -41,7 +41,7 @@ function createVolleyballSportState() {
     ui: {
       showCard: null,
       showPregame: false,
-      venueName: "TVF ZİRAAT BANKKART VOLEYBOL SALONU",
+      venueName: "",
       mvpName: "",
       mvpTeam: "A",
       customTitle: "",

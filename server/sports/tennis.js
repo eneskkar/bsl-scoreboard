@@ -89,7 +89,7 @@ function isTiebreakOver(scoreA, scoreB) {
   const maxP = Math.max(scoreA, scoreB);
   const diff = Math.abs(scoreA - scoreB);
 
-  return maxP >= 7 && diff >= 2;
+  return maxP >= 10 && diff >= 2;
 }
 
 function isRegularSetOver(scoreA, scoreB) {

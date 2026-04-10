@@ -189,6 +189,11 @@ socket.on("admin:score", ({ matchId, team, delta }) => {
   const next = Math.max(0, (state.teams[team].points || 0) + delta);
   state.teams[team].points = next;
 
+  // 🔥 KRİTİK SATIR
+  if (delta > 0) {
+    state.match.serve = team;
+  }
+
   volleyball.updateScore(state);
   volleyball.computePointAlerts(state);
   setMatch(matchId, state);

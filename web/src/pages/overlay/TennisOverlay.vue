@@ -474,13 +474,18 @@ const footerLabel = computed(() => {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 24px;
+  padding: 18px;
+  box-sizing: border-box;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.18);
 }
 
 .team-logo {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 14px 34px rgba(0,0,0,0.30));
+  
 }
 
 .main-score-box {

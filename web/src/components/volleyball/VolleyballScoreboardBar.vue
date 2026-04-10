@@ -3,23 +3,49 @@
 
     <!-- Row: Team A -->
     <div class="row a">
-      <div class="logo" v-if="teams?.A?.logoUrl">
-        <img :src="teams.A.logoUrl" alt="A" />
-      </div>
-      <div class="abbr">{{ teams?.A?.abbr || teams?.A?.name || "TEAM A" }}</div>
-      <div class="score">{{ teams?.A?.points ?? 0 }}</div>
-      <div class="serve" v-if="match?.serve === 'A'">●</div>
-    </div>
+  <div class="logo" v-if="teams?.A?.logoUrl">
+    <img :src="teams.A.logoUrl" alt="A" />
+  </div>
+  <div class="abbr">{{ teams?.A?.abbr || teams?.A?.name || "TEAM A" }}</div>
+  <div class="score">{{ teams?.A?.points ?? 0 }}</div>
+  <div class="serve" v-if="match?.serve === 'A'">●</div>
+
+  <div
+    v-if="alerts?.matchPoint === 'A'"
+    class="point-badge match"
+  >
+    MATCH POINT
+  </div>
+  <div
+    v-else-if="alerts?.setPoint === 'A'"
+    class="point-badge"
+  >
+    SET POINT
+  </div>
+</div>
 
     <!-- Row: Team B -->
-    <div class="row b">
-      <div class="logo" v-if="teams?.B?.logoUrl">
-        <img :src="teams.B.logoUrl" alt="B" />
-      </div>
-      <div class="abbr">{{ teams?.B?.abbr || teams?.B?.name || "TEAM B" }}</div>
-      <div class="score">{{ teams?.B?.points ?? 0 }}</div>
-      <div class="serve" v-if="match?.serve === 'B'">●</div>
-    </div>
+<div class="row b">
+  <div class="logo" v-if="teams?.B?.logoUrl">
+    <img :src="teams.B.logoUrl" alt="B" />
+  </div>
+  <div class="abbr">{{ teams?.B?.abbr || teams?.B?.name || "TEAM B" }}</div>
+  <div class="score">{{ teams?.B?.points ?? 0 }}</div>
+  <div class="serve" v-if="match?.serve === 'B'">●</div>
+
+  <div
+    v-if="alerts?.matchPoint === 'B'"
+    class="point-badge match"
+  >
+    MATCH POINT
+  </div>
+  <div
+    v-else-if="alerts?.setPoint === 'B'"
+    class="point-badge"
+  >
+    SET POINT
+  </div>
+</div>
 
     <!-- Set info -->
     <div class="setline">
@@ -42,6 +68,7 @@ const props = defineProps({
   meta: Object,
   match: Object,
   teams: Object,
+  alerts: Object,
   target: Number
 });
 
@@ -76,6 +103,8 @@ const serve = computed(() => props.match?.serve ?? "A");
 }
 
 .row{
+  position: relative;
+  overflow: visible;
   display: grid;
   grid-template-columns: 48px 1fr 72px 22px;
   align-items: center;
@@ -169,5 +198,49 @@ const serve = computed(() => props.match?.serve ?? "A");
   font-size: 16px;
   letter-spacing: 1px;
   opacity: .9;
+}
+.point-badge{
+  position: absolute;
+  top: 50%;
+  left: calc(100% - 18px);
+  transform: translateY(-50%);
+  transform-origin: left center;
+
+  min-width: 150px;
+  height: 40px;
+  padding: 0 18px 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 0 14px 14px 0;
+  background: linear-gradient(90deg, #19d7ff 0%, #00a8ef 100%);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  line-height: 1;
+  white-space: nowrap;
+
+  box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+  animation: pointBadgeExpand 0.28s ease-out;
+  z-index: 20;
+}
+
+.point-badge.match{
+  min-width: 170px;
+  background: linear-gradient(90deg, #ffb21c 0%, #ff6d00 100%);
+}
+
+@keyframes pointBadgeExpand {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) scaleX(0.15);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) scaleX(1);
+  }
 }
 </style>

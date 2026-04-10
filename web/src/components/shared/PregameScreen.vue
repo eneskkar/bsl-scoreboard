@@ -49,7 +49,7 @@
 
     <!-- Alt salon adı -->
     <div class="venue-bar">
-      {{ venue || "TVF ZİRAAT BANKKART VOLEYBOL SALONU" }}
+      {{ venue}}
     </div>
   </div>
 </template>
@@ -65,7 +65,7 @@ defineProps({
   },
   venue: {
     type: String,
-    default: "TVF ZİRAAT BANKKART VOLEYBOL SALONU"
+    default: ""
   },
   bslLogoUrl: {
     type: String,
@@ -139,11 +139,16 @@ defineProps({
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 24px;
+  padding: 18px;
+  box-sizing: border-box;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
 }
 
 .team-logo {
-  max-width: 220px;
-  max-height: 220px;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
   background: transparent;
 }

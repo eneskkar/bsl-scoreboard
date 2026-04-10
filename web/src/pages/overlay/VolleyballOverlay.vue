@@ -12,6 +12,7 @@
   :meta="state.meta"
   :match="state.match"
   :teams="state.teams"
+  :alerts="state.alerts"
   :target="target"
   />
   <div class="breakBarWrap" v-if="bottomBanner">
@@ -193,10 +194,6 @@ const bottomBanner = computed(() => {
 
   // Öncelik: Breaktime
   if (s.match?.break?.active) return "BREAKTIME";
-
-  // Sonra Match/Set point
-  if (s.alerts?.matchPoint) return "MATCH POINT";
-  if (s.alerts?.setPoint) return "SET POINT";
 
   return "";
 });

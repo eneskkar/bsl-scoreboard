@@ -609,5 +609,221 @@
       "customTitle": "",
       "customSubtitle": ""
     }
+  },
+  "volleyball-1775853734335": {
+    "sport": "volleyball",
+    "meta": {
+      "tournamentName": "",
+      "round": "",
+      "createdAt": 1775853734339,
+      "stage": "group",
+      "format": "bo3",
+      "setsToWin": 2,
+      "maxSets": 3
+    },
+    "teams": {
+      "A": {
+        "name": "TEAM A",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "timeouts": 2,
+        "setsWon": 0,
+        "points": 0
+      },
+      "B": {
+        "name": "TEAM B",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "timeouts": 2,
+        "setsWon": 0,
+        "points": 0
+      }
+    },
+    "match": {
+      "currentSet": 1,
+      "serve": "A",
+      "status": "live",
+      "history": [],
+      "break": {
+        "active": false,
+        "team": null,
+        "startedAt": null,
+        "durationSec": 30
+      }
+    },
+    "alerts": {
+      "setPoint": null,
+      "matchPoint": null
+    },
+    "lineups": {
+      "A": [],
+      "B": []
+    },
+    "ui": {
+      "showCard": null,
+      "showPregame": false,
+      "venueName": "TVF ZİRAAT BANKKART VOLEYBOL SALONU",
+      "mvpName": "",
+      "mvpTeam": "A",
+      "customTitle": "",
+      "customSubtitle": ""
+    }
+  },
+  "tennis-1775853994716": {
+    "sport": "tennis",
+    "meta": {
+      "tournamentName": "",
+      "round": "",
+      "createdAt": 1775853994718,
+      "stage": "group",
+      "format": "bo3",
+      "setsToWin": 2,
+      "maxSets": 3
+    },
+    "teams": {
+      "A": {
+        "name": "TEAM A",
+        "abbr": "",
+        "logoUrl": "/uploads/1775854072332_adesso.png",
+        "panelBg": "",
+        "setsWon": 2
+      },
+      "B": {
+        "name": "TEAM B",
+        "abbr": "",
+        "logoUrl": "/uploads/1775854414139_hangikredi.png",
+        "panelBg": "",
+        "setsWon": 1
+      }
+    },
+    "match": {
+      "currentSet": 3,
+      "server": "A",
+      "status": "finished",
+      "history": [
+        {
+          "setNo": 1,
+          "A": 6,
+          "B": 0,
+          "winner": "A",
+          "isTiebreak": false
+        },
+        {
+          "setNo": 2,
+          "A": 1,
+          "B": 6,
+          "winner": "B",
+          "isTiebreak": false
+        },
+        {
+          "setNo": 3,
+          "A": 11,
+          "B": 9,
+          "winner": "A",
+          "isTiebreak": true
+        }
+      ],
+      "isTiebreak": true,
+      "currentSetScore": {
+        "A": 11,
+        "B": 9
+      }
+    },
+    "alerts": {},
+    "lineups": {
+      "A": [],
+      "B": []
+    },
+    "ui": {
+      "showCard": null,
+      "showPregame": false,
+      "venueName": "",
+      "mvpName": "",
+      "mvpTeam": "A",
+      "customTitle": "",
+      "customSubtitle": ""
+    }
+  },
+  "volleyball-1775855483305": {
+    "sport": "volleyball",
+    "meta": {
+      "tournamentName": "",
+      "round": "",
+      "createdAt": 1775855483309,
+      "stage": "group",
+      "format": "bo3",
+      "setsToWin": 2,
+      "maxSets": 3
+    },
+    "teams": {
+      "A": {
+        "name": "TEAM A",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "timeouts": 2,
+        "setsWon": 1,
+        "points": 0
+      },
+      "B": {
+        "name": "TEAM B",
+        "abbr": "",
+        "logoUrl": "",
+        "panelBg": "",
+        "timeouts": 2,
+        "setsWon": 2,
+        "points": 0
+      }
+    },
+    "match": {
+      "currentSet": 3,
+      "serve": "B",
+      "status": "finished",
+      "history": [
+        {
+          "setNo": 1,
+          "A": 25,
+          "B": 27,
+          "winner": "B"
+        },
+        {
+          "setNo": 2,
+          "A": 25,
+          "B": 20,
+          "winner": "A"
+        },
+        {
+          "setNo": 3,
+          "A": 14,
+          "B": 16,
+          "winner": "B"
+        }
+      ],
+      "break": {
+        "active": false,
+        "team": null,
+        "startedAt": null,
+        "durationSec": 30
+      }
+    },
+    "alerts": {
+      "setPoint": null,
+      "matchPoint": null
+    },
+    "lineups": {
+      "A": [],
+      "B": []
+    },
+    "ui": {
+      "showCard": "result",
+      "showPregame": false,
+      "venueName": "",
+      "mvpName": "",
+      "mvpTeam": "A",
+      "customTitle": "",
+      "customSubtitle": ""
+    }
   }
 }
