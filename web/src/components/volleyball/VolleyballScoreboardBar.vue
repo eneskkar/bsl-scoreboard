@@ -6,7 +6,7 @@
   <div class="logo" v-if="teams?.A?.logoUrl">
     <img :src="teams.A.logoUrl" alt="A" />
   </div>
-  <div class="abbr">{{ teams?.A?.abbr || teams?.A?.name || "TEAM A" }}</div>
+  <div class="abbr">{{ teams?.A?.name || "TEAM A" }}</div>
   <div class="score">{{ teams?.A?.points ?? 0 }}</div>
   <div class="serve" v-if="match?.serve === 'A'">●</div>
 
@@ -29,7 +29,7 @@
   <div class="logo" v-if="teams?.B?.logoUrl">
     <img :src="teams.B.logoUrl" alt="B" />
   </div>
-  <div class="abbr">{{ teams?.B?.abbr || teams?.B?.name || "TEAM B" }}</div>
+  <div class="abbr">{{ teams?.B?.name || "TEAM B" }}</div>
   <div class="score">{{ teams?.B?.points ?? 0 }}</div>
   <div class="serve" v-if="match?.serve === 'B'">●</div>
 
@@ -82,7 +82,7 @@ const serve = computed(() => props.match?.serve ?? "A");
   position: absolute;
   top: 40px;
   left: 40px;
-  width: 420px;
+  width: 540px;
   user-select: none;
   font-family: var(--bsl-font);
 }
@@ -105,12 +105,12 @@ const serve = computed(() => props.match?.serve ?? "A");
 .row{
   position: relative;
   overflow: visible;
+
   display: grid;
-  grid-template-columns: 48px 1fr 72px 22px;
-  align-items: center;
+grid-template-columns: 48px minmax(0, 1fr) 64px 26px;  align-items: center;
   gap: 14px;
 
-  padding: 14px 16px;
+  padding: 14px 18px;
   border-radius: 18px;
   background: rgba(0,0,0,0.70);
   outline: 1px solid rgba(255,255,255,0.12);
@@ -140,9 +140,10 @@ const serve = computed(() => props.match?.serve ?? "A");
 }
 
 .abbr{
+  min-width: 0;
   font-weight: 900;
-  font-size: 22px;
-  letter-spacing: 0.8px;
+  font-size: 24px;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
   color: rgba(255,255,255,0.92);
   white-space: nowrap;

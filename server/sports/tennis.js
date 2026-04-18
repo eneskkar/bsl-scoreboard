@@ -94,9 +94,20 @@ function isTiebreakOver(scoreA, scoreB) {
 
 function isRegularSetOver(scoreA, scoreB) {
   const maxP = Math.max(scoreA, scoreB);
+  const minP = Math.min(scoreA, scoreB);
   const diff = Math.abs(scoreA - scoreB);
 
-  return maxP >= 6 && diff >= 2;
+  // 6-0 ... 6-4
+  if (maxP >= 6 && diff >= 2 && maxP === 6) {
+    return true;
+  }
+
+  // 7-5 veya 7-6
+  if (maxP === 7 && (minP === 5 || minP === 6)) {
+    return true;
+  }
+
+  return false;
 }
 
 function finalizeCurrentSet(state) {
