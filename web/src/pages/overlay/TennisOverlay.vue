@@ -14,6 +14,11 @@
   class="tennis-scoreboard"
 >
   <div class="score-shell">
+  <Transition name="setTbSlide">
+    <div v-if="showSetTiebreakBadge" class="set-tiebreak-badge">
+      SET TIEBREAK
+    </div>
+  </Transition>
     <div class="top-status">
       {{ footerLabel }}
     </div>
@@ -200,12 +205,19 @@ const teamPanelStyle = (teamKey) => {
   };
 
 };
+
 const footerLabel = computed(() => {
   if (!state.value) return "";
 
-  return state.value.match.isTiebreak
-    ? "TIEBREAK"
-    : `SET ${state.value.match.currentSet}`;
+  return `SET ${state.value.match.currentSet}`;
+});
+
+const showSetTiebreakBadge = computed(() => {
+  const a = state.value?.match?.currentSetScore?.A ?? 0;
+  const b = state.value?.match?.currentSetScore?.B ?? 0;
+
+  // Sadece 6-6 olduğunda göster
+  return a === 6 && b === 6;
 });
 </script>
 
@@ -247,6 +259,44 @@ const footerLabel = computed(() => {
   font-size: 12px;
   font-weight: 900;
   letter-spacing: 0.5px;
+}
+.set-tiebreak-badge {
+  position: absolute;
+  left: 0;
+  top: -34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background: #0f2a45;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+  z-index: 5;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-bottom: none;
+}
+
+.setTbSlide-enter-active,
+.setTbSlide-leave-active {
+  transition: all 0.28s ease;
+}
+
+.setTbSlide-enter-from,
+.setTbSlide-leave-to {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.setTbSlide-enter-to,
+.setTbSlide-leave-from {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .sb-team-logo-wrap {

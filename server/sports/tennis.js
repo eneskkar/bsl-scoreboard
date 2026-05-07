@@ -1,5 +1,6 @@
 function createTennisSportState() {
   return {
+    sport: "tennis",
     meta: {
       stage: "group", // group | semi | final
       format: "bo3",  // bo3 | bo5
@@ -204,18 +205,21 @@ function forceFinishSet(state) {
 function resetMatch(state, keepTeams = true) {
   const next = createTennisSportState();
 
-  if (keepTeams) {
-    next.teams.A.name = state.teams.A.name;
-    next.teams.B.name = state.teams.B.name;
+  if (keepTeams && state?.teams?.A && state?.teams?.B) {
+    next.teams.A.name = state.teams.A.name || "TEAM A";
+    next.teams.B.name = state.teams.B.name || "TEAM B";
+
     next.teams.A.abbr = state.teams.A.abbr || "";
     next.teams.B.abbr = state.teams.B.abbr || "";
+
     next.teams.A.logoUrl = state.teams.A.logoUrl || "";
     next.teams.B.logoUrl = state.teams.B.logoUrl || "";
+
     next.teams.A.panelBg = state.teams.A.panelBg || "";
     next.teams.B.panelBg = state.teams.B.panelBg || "";
   }
 
-  applyStage(next, state.meta.stage || "group");
+  applyStage(next, state?.meta?.stage || "group");
 
   return next;
 }

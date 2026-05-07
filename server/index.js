@@ -270,8 +270,10 @@ socket.on("admin:sets", ({ matchId, team, delta }) => {
 
     if (state.sport === "tennis") {
       nextState = tennis.resetMatch(state, keepTeams !== false);
+      nextState.sport = "tennis";
     } else {
       nextState = volleyball.resetMatch(state, keepTeams !== false);
+      nextState.sport = "volleyball";
       volleyball.computePointAlerts(nextState);
     }
     setMatch(matchId, nextState);
