@@ -95,36 +95,39 @@
         <section class="panel score-panel">
           <div class="panel-head"><h2><span class="section-icon">▤</span> Skor Kontrolü</h2></div>
           <div class="scoreboard-preview">
-            <div class="score-team score-a">
-              <span class="team-name">{{ state.teams.A.name || 'Takım A' }}</span>
-              <strong>{{ state.match.currentSetScore.A }}</strong>
-              <small>Set: <b>{{ state.teams.A.setsWon }}</b></small>
+            <div class="score-column">
+              <div class="score-team score-a">
+                <span class="team-name">{{ state.teams.A.name || 'Takım A' }}</span>
+                <strong>{{ state.match.currentSetScore.A }}</strong>
+                <small>Set: <b>{{ state.teams.A.setsWon }}</b></small>
+              </div>
+              <div class="point-controls">
+                <button class="btn teamA" @click="point('A', 1)">+1 Game {{ state.teams.A.name || 'Takım A' }}</button>
+                <button class="btn dark" @click="point('A', -1)">-1 Game {{ state.teams.A.name || 'Takım A' }}</button>
+              </div>
             </div>
             <div class="score-meta">
               <strong>Set {{ state.match.currentSet }}</strong>
-              <span>Servis: <b>{{ state.teams[state.match.server]?.name || '-' }}</b></span>
               <span v-if="state.match.isTiebreak" class="tiebreak-badge">TIEBREAK</span>
             </div>
-            <div class="score-team score-b">
-              <span class="team-name">{{ state.teams.B.name || 'Takım B' }}</span>
-              <strong>{{ state.match.currentSetScore.B }}</strong>
-              <small>Set: <b>{{ state.teams.B.setsWon }}</b></small>
+            <div class="score-column">
+              <div class="score-team score-b">
+                <span class="team-name">{{ state.teams.B.name || 'Takım B' }}</span>
+                <strong>{{ state.match.currentSetScore.B }}</strong>
+                <small>Set: <b>{{ state.teams.B.setsWon }}</b></small>
+              </div>
+              <div class="point-controls">
+                <button class="btn teamB" @click="point('B', 1)">+1 Game {{ state.teams.B.name || 'Takım B' }}</button>
+                <button class="btn dark" @click="point('B', -1)">-1 Game {{ state.teams.B.name || 'Takım B' }}</button>
+              </div>
             </div>
-          </div>
-          <div class="point-controls">
-            <button class="btn teamA" @click="point('A', 1)">+1 {{ state.teams.A.name || 'Takım A' }}</button>
-            <button class="btn dark" @click="point('A', -1)">-1 {{ state.teams.A.name || 'Takım A' }}</button>
-            <button class="btn teamB" @click="point('B', 1)">+1 {{ state.teams.B.name || 'Takım B' }}</button>
-            <button class="btn dark" @click="point('B', -1)">-1 {{ state.teams.B.name || 'Takım B' }}</button>
           </div>
         </section>
 
         <section class="panel match-actions-panel">
           <div class="panel-head"><h2><span class="section-icon">▱</span> Set / Maç Aksiyonları</h2></div>
-          <div class="action-row"><button class="btn warning" @click="finishSet()">⚑ Seti Bitir</button></div>
-          <div class="action-row two">
-            <button class="btn warning-outline" @click="resetSet()">↻ Aktif Seti Sıfırla</button>
-            <button class="btn secondary" @click="showCard('result')">Result Göster</button>
+          <div class="action-row">
+            <button class="btn secondary" @click="showCard('result')">Sonucu Göster</button>
           </div>
           <div class="action-row two">
             <button class="btn secondary" @click="hideCard()">Kartı Kapat / Hide Card</button>
@@ -307,17 +310,18 @@ input:focus, select:focus { border-color: #278af5; box-shadow: 0 0 0 3px #2685fa
 .action-row.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .blue-soft { color: #064ba0; background: #dcecff; }
 .danger { background: #d3272e; color: white; }
-.scoreboard-preview { display: grid; grid-template-columns: minmax(0, 1fr) minmax(98px, .48fr) minmax(0, 1fr); gap: 14px; align-items: center; margin: 25px 0 26px; }
+.scoreboard-preview { display: grid; grid-template-columns: minmax(0, 1fr) minmax(72px, .42fr) minmax(0, 1fr); gap: 14px; align-items: start; margin: 25px 0 0; }
+.score-column { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
 .score-team { text-align: center; border-radius: 14px; padding: 18px 10px; min-width: 0; }
 .score-a { background: #eaf9f0; border-left: 5px solid #20b449; }
 .score-b { background: #eaf3ff; border-left: 5px solid #196bf1; }
 .team-name { display: block; font-size: 16px; font-weight: 850; overflow-wrap: anywhere; }
 .score-team strong { display: block; font-weight: 900; font-size: 46px; line-height: 1.1; margin: 12px 0 8px; font-variant-numeric: tabular-nums; }
 .score-team small { font-size: 13px; }
-.score-meta { display: flex; flex-direction: column; gap: 7px; align-items: center; text-align: center; min-width: 0; font-size: 12px; color: #475671; overflow-wrap: anywhere; }
+.score-meta { display: flex; flex-direction: column; gap: 7px; align-items: center; justify-content: center; text-align: center; min-width: 0; min-height: 130px; font-size: 12px; color: #475671; overflow-wrap: anywhere; }
 .score-meta > strong { font-size: 15px; color: #354862; }
 .tiebreak-badge { background: #ffe1dd; color: #bf3330; border-radius: 100px; padding: 5px 9px; font-weight: 850; font-size: 10px; }
-.point-controls { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; }
+.point-controls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
 .point-controls .btn { font-size: 13px; min-height: 51px; }
 .teamA { color: white; background: linear-gradient(180deg, #35bd55, #24a648); }
 .teamB { color: white; background: linear-gradient(180deg, #2274f5, #0f59db); }
@@ -330,6 +334,6 @@ input:focus, select:focus { border-color: #278af5; box-shadow: 0 0 0 3px #2685fa
 .quick-links { display: flex; gap: 10px; flex-wrap: wrap; }
 .quick-links a { display: inline-flex; align-items: center; justify-content: center; border: 1px solid #bcd5fa; border-radius: 11px; padding: 11px 18px; background: #e9f2ff; color: #1253a9; text-decoration: none; font-weight: 800; font-size: 14px; }
 @media (max-width: 1150px) { .layout { grid-template-columns: 1fr; } }
-@media (max-width: 760px) { .admin-page { padding: 14px; } .topbar h1 { font-size: 23px; } .team-grid { grid-template-columns: 1fr; } .scoreboard-preview { gap: 8px; grid-template-columns: minmax(0, 1fr) 85px minmax(0, 1fr); } .score-team { padding: 14px 6px; } .score-team strong { font-size: 36px; } .team-name { font-size: 13px; } .point-controls { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 420px) { .panel { padding: 16px; } .stat-pill { min-width: 85px; } .scoreboard-preview { grid-template-columns: 1fr 1fr; } .score-meta { grid-column: 1 / -1; grid-row: 2; } .score-a { grid-column: 1; grid-row: 1; } .score-b { grid-column: 2; grid-row: 1; } .action-row.two { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .admin-page { padding: 14px; } .topbar h1 { font-size: 23px; } .team-grid { grid-template-columns: 1fr; } .scoreboard-preview { gap: 8px; grid-template-columns: minmax(0, 1fr) 65px minmax(0, 1fr); } .score-team { padding: 14px 6px; } .score-team strong { font-size: 36px; } .team-name { font-size: 13px; } .point-controls .btn { padding: 8px 4px; font-size: 11px; } }
+@media (max-width: 420px) { .panel { padding: 16px; } .stat-pill { min-width: 85px; } .scoreboard-preview { grid-template-columns: 1fr 1fr; } .score-meta { grid-column: 1 / -1; grid-row: 1; min-height: auto; } .score-column:first-child { grid-column: 1; grid-row: 2; } .score-column:last-child { grid-column: 2; grid-row: 2; } .action-row.two { grid-template-columns: 1fr; } }
 </style>
